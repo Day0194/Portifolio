@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Seu Nome | Desenvolvedor Full-Stack</title>
-<meta name="description" content="Desenvolvedor Full-Stack que transforma ideias em produtos web rápidos, claros e prontos para vender.">
+<title>Maria Eduarda | Designer UI/UX</title>
+<meta name="description" content="Designer UI/UX com formação em front-end. Interfaces claras, construídas a partir do que os usuários realmente enfrentam.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -12,23 +12,26 @@
 <script>
 tailwind.config = {
   theme: { extend: {
-    colors: { ink: '#050806', coal: '#0d1310', moss: '#16201b', mist: '#a7b5ad', bone: '#eef3ef', em: '#10b981', emd: '#059669' },
+    colors: { ink: '#080607', coal: '#120d10', moss: '#1f171b', mist: '#b9aab1', bone: '#f7f0f3', em: '#f9a8d4', emd: '#f472b6' },
     fontFamily: { display: ['"Bricolage Grotesque"', 'system-ui', 'sans-serif'], sans: ['"Instrument Sans"', 'system-ui', 'sans-serif'] }
   } }
 }
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { background: #050806; color: #eef3ef; }
-  :focus-visible { outline: 2px solid #10b981; outline-offset: 3px; border-radius: 4px; }
+  body { background: #080607; color: #f7f0f3; }
+  :focus-visible { outline: 2px solid #f9a8d4; outline-offset: 3px; border-radius: 4px; }
   .reveal { opacity: 0; transform: translateY(14px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
   .hero-in { opacity: 0; animation: heroIn .9s ease forwards; }
   @keyframes heroIn { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
-  .glow { background: radial-gradient(60% 60% at 70% 20%, rgba(16,185,129,.22), transparent 70%); }
-  body.editing [data-e] { outline: 1px dashed rgba(16,185,129,.55); outline-offset: 3px; cursor: text; }
-  body.editing [data-e]:focus { outline: 2px solid #10b981; background: rgba(16,185,129,.08); }
+  .glow { background: radial-gradient(60% 60% at 70% 20%, rgba(249,168,212,.22), transparent 70%); }
+  body.editing [data-e] { outline: 1px dashed rgba(249,168,212,.55); outline-offset: 3px; cursor: text; }
+  body.editing [data-e]:focus { outline: 2px solid #f9a8d4; background: rgba(249,168,212,.08); }
   body.editing a[data-link] { cursor: pointer; }
+  .edit-only { display: none; }
+  body.editing .edit-only { display: flex; }
+  .gal::-webkit-scrollbar { display: none; }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .reveal, .hero-in { opacity: 1; transform: none; transition: none; animation: none; }
@@ -47,11 +50,11 @@ tailwind.config = {
 <!-- Navegação -->
 <header class="fixed inset-x-0 top-0 z-40 border-b border-white/5 bg-ink/80 backdrop-blur">
   <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4" aria-label="Principal">
-    <a href="#inicio" class="font-display text-lg font-bold" data-e>Seu Nome</a>
+    <a href="#inicio" class="font-display text-lg font-bold" data-e>Maria Eduarda</a>
     <ul class="hidden gap-8 text-sm text-mist md:flex">
       <li><a class="hover:text-bone" href="#sobre">Sobre</a></li>
       <li><a class="hover:text-bone" href="#projetos">Projetos</a></li>
-      <li><a class="hover:text-bone" href="#resultados">Resultados</a></li>
+      <li><a class="hover:text-bone" href="#resultados">Números</a></li>
       <li><a class="hover:text-bone" href="#contato">Contato</a></li>
     </ul>
     <a href="#contato" class="rounded-full border border-em/60 px-4 py-2 text-sm font-medium text-em hover:bg-em hover:text-ink">Fale comigo</a>
@@ -62,11 +65,11 @@ tailwind.config = {
 <!-- Hero -->
 <section id="inicio" class="glow relative flex min-h-screen items-center px-5 pt-24 pb-16">
   <div class="mx-auto w-full max-w-6xl">
-    <p class="hero-in mb-6 text-mist" style="animation-delay:.05s" data-e>Desenvolvedor Full-Stack · Recife, Brasil</p>
-    <h1 class="hero-in font-display text-5xl font-extrabold leading-[1.02] tracking-tight sm:text-7xl lg:text-8xl" style="animation-delay:.2s" data-e>Sites e sistemas que carregam rápido e vendem sozinhos.</h1>
-    <p class="hero-in mt-8 max-w-xl text-lg leading-relaxed text-mist" style="animation-delay:.4s" data-e>Eu desenho e programo produtos web para pequenas empresas e startups que precisam de mais clientes, menos retrabalho e uma presença digital em que dá para confiar.</p>
+    <p class="hero-in mb-6 text-mist" style="animation-delay:.05s" data-e>Designer UI/UX · Pernambuco, Brasil</p>
+    <h1 class="hero-in font-display text-5xl font-extrabold leading-[1.02] tracking-tight sm:text-7xl lg:text-8xl" style="animation-delay:.2s" data-e>Interfaces que as pessoas entendem de primeira.</h1>
+    <p class="hero-in mt-8 max-w-xl text-lg leading-relaxed text-mist" style="animation-delay:.4s" data-e>Sou designer UI/UX com formação em front-end. Depois de anos ouvindo usuários de todo o Brasil, desenho produtos digitais que resolvem a dúvida antes de ela virar chamado.</p>
     <div class="hero-in mt-10 flex flex-wrap gap-4" style="animation-delay:.6s">
-      <a href="#contato" class="rounded-full bg-em px-7 py-3.5 font-semibold text-ink hover:bg-emd" data-e>Pedir um orçamento</a>
+      <a href="#contato" class="rounded-full bg-em px-7 py-3.5 font-semibold text-ink hover:bg-emd" data-e>Vamos conversar</a>
       <a href="#projetos" class="rounded-full border border-white/15 px-7 py-3.5 font-medium hover:border-em" data-e>Ver projetos</a>
     </div>
   </div>
@@ -76,19 +79,26 @@ tailwind.config = {
 <section id="sobre" class="px-5 py-24">
   <div class="mx-auto grid max-w-6xl gap-14 lg:grid-cols-5">
     <div class="reveal lg:col-span-3">
-      <h2 class="font-display text-3xl font-bold sm:text-5xl" data-e>Programo pensando em quem vai usar.</h2>
+      <h2 class="font-display text-3xl font-bold sm:text-5xl" data-e>Desenho a partir do que os usuários realmente enfrentam.</h2>
       <div class="mt-8 max-w-prose space-y-5 text-lg leading-relaxed text-mist">
-        <p data-e>Comecei a programar para resolver um problema do meu próprio negócio e descobri que gosto mais de resolver problemas dos outros. Desde então, entreguei mais de 40 projetos para clientes de áreas como varejo, educação e saúde.</p>
-        <p data-e>Cuido do projeto de ponta a ponta: conversa inicial, design, código, publicação e suporte. Você fala com uma pessoa só, recebe prazos claros e acompanha cada etapa.</p>
+        <p data-e>Estudo Design na UFPE e Análise e Desenvolvimento de Sistemas, e sou certificada em desenvolvimento front-end. Com HTML, CSS e JavaScript, penso cada interface já sabendo como ela será construída.</p>
+        <p data-e>Por mais de três anos, atendi motoristas e passageiros do inDrive em todo o país e cuidei de incidentes críticos. Isso me ensinou a ler o que está por trás de cada reclamação e a transformar atrito em decisão de design.</p>
       </div>
     </div>
     <div class="reveal lg:col-span-2">
       <h3 class="font-display text-xl font-bold" data-e>Habilidades principais</h3>
       <ul class="mt-6 divide-y divide-white/10 border-y border-white/10">
-        <li class="flex justify-between py-4"><span data-e>Front-end</span><span class="text-mist" data-e>React, Next.js, Tailwind CSS</span></li>
-        <li class="flex justify-between py-4"><span data-e>Back-end</span><span class="text-mist" data-e>Node.js, PostgreSQL, APIs REST</span></li>
-        <li class="flex justify-between py-4"><span data-e>Design de interface</span><span class="text-mist" data-e>Figma, design systems</span></li>
-        <li class="flex justify-between py-4"><span data-e>Performance e SEO</span><span class="text-mist" data-e>Core Web Vitals, acessibilidade</span></li>
+        <li class="flex justify-between gap-4 py-4"><span data-e>Design de interface</span><span class="text-right text-mist" data-e>UI/UX Design, design gráfico</span></li>
+        <li class="flex justify-between gap-4 py-4"><span data-e>Front-end</span><span class="text-right text-mist" data-e>HTML, CSS, JavaScript</span></li>
+        <li class="flex justify-between gap-4 py-4"><span data-e>Programação</span><span class="text-right text-mist" data-e>Python, resolução de problemas</span></li>
+        <li class="flex justify-between gap-4 py-4"><span data-e>Idiomas</span><span class="text-right text-mist" data-e>Inglês C2, mandarim básico</span></li>
+        <li class="flex justify-between gap-4 py-4"><span data-e>Suporte e gestão</span><span class="text-right text-mist" data-e>Incidentes, gestão administrativa, Office</span></li>
+      </ul>
+      <h3 class="mt-10 font-display text-xl font-bold" data-e>Formação</h3>
+      <ul class="mt-6 divide-y divide-white/10 border-y border-white/10">
+        <li class="flex justify-between gap-4 py-4"><span data-e>UFPE</span><span class="text-right text-mist" data-e>Bacharelado em Design (desde 2020)</span></li>
+        <li class="flex justify-between gap-4 py-4"><span data-e>Descomplica</span><span class="text-right text-mist" data-e>Análise e Desenv. de Sistemas (desde 2025)</span></li>
+        <li class="flex justify-between gap-4 py-4"><span data-e>ETE Cícero Dias</span><span class="text-right text-mist" data-e>Técnico em Multimídia (2017–2019)</span></li>
       </ul>
     </div>
   </div>
@@ -97,112 +107,178 @@ tailwind.config = {
 <!-- Projetos -->
 <section id="projetos" class="bg-coal px-5 py-24">
   <div class="mx-auto max-w-6xl">
-    <h2 class="reveal font-display text-3xl font-bold sm:text-5xl" data-e>Projetos selecionados</h2>
-    <p class="reveal mt-4 max-w-xl text-lg text-mist" data-e>Quatro trabalhos que mostram como transformo uma necessidade de negócio em um produto que funciona.</p>
+    <h2 class="reveal font-display text-3xl font-bold sm:text-5xl" data-e>Projetos e experiências</h2>
+    <p class="reveal mt-4 max-w-xl text-lg text-mist" data-e>O que já fiz e o que cada experiência me ensinou sobre criar produtos para pessoas reais.</p>
     <div class="mt-14 grid gap-6 md:grid-cols-2">
 
       <article class="reveal group flex flex-col rounded-2xl border border-white/10 bg-moss/40 p-7 hover:border-em/50">
-        <div class="mb-6 flex aspect-[16/9] items-center justify-center overflow-hidden rounded-xl bg-ink text-sm text-mist" data-img title="Clique no modo edição para trocar a imagem">Imagem do projeto</div>
-        <h3 class="font-display text-2xl font-bold" data-e>Loja online da Casa Verde</h3>
-        <p class="mt-3 flex-1 leading-relaxed text-mist" data-e>E-commerce de plantas com checkout em duas etapas e cálculo de frete automático. As vendas online subiram 62% em três meses.</p>
-        <ul class="mt-5 flex flex-wrap gap-2 text-sm"><li class="rounded-full bg-em/10 px-3 py-1 text-em" data-e>Next.js</li><li class="rounded-full bg-em/10 px-3 py-1 text-em" data-e>Stripe</li><li class="rounded-full bg-em/10 px-3 py-1 text-em" data-e>PostgreSQL</li></ul>
-        <a href="#" data-link class="mt-6 text-sm font-semibold text-em hover:underline">Ver projeto</a>
+        <div class="mb-6 flex aspect-[16/9] items-center justify-center overflow-hidden rounded-xl bg-ink text-sm text-mist" data-img title="No modo edição, use o botão para adicionar imagens">Imagem do projeto</div>
+        <h3 class="font-display text-2xl font-bold" data-e>Case de UI/UX: adicione o seu aqui</h3>
+        <p class="mt-3 flex-1 leading-relaxed text-mist" data-e>Espaço para o seu melhor projeto de interface: contexto, problema, processo e resultado. Clique em Editar site para escrever e enviar as imagens das telas.</p>
+        <ul class="mt-5 flex flex-wrap gap-2 text-sm"><li class="rounded-full bg-em/10 px-3 py-1 text-em" data-e>UI Design</li><li class="rounded-full bg-em/10 px-3 py-1 text-em" data-e>UX Research</li><li class="rounded-full bg-em/10 px-3 py-1 text-em" data-e>Prototipação</li></ul>
+        <a href="#" hidden data-link class="mt-6 text-sm font-semibold text-em hover:underline">Ver case</a>
       </article>
 
       <article class="reveal group flex flex-col rounded-2xl border border-white/10 bg-moss/40 p-7 hover:border-em/50">
-        <div class="mb-6 flex aspect-[16/9] items-center justify-center overflow-hidden rounded-xl bg-ink text-sm text-mist" data-img title="Clique no modo edição para trocar a imagem">Imagem do projeto</div>
-        <h3 class="font-display text-2xl font-bold" data-e>Painel de agendamentos da Clínica Aurora</h3>
-        <p class="mt-3 flex-1 leading-relaxed text-mist" data-e>Sistema de marcação de consultas com lembretes por WhatsApp. Reduziu faltas em 38% e liberou a recepção de ligações repetitivas.</p>
-        <ul class="mt-5 flex flex-wrap gap-2 text-sm"><li class="rounded-full bg-em/10 px-3 py-1 text-em" data-e>React</li><li class="rounded-full bg-em/10 px-3 py-1 text-em" data-e>Node.js</li><li class="rounded-full bg-em/10 px-3 py-1 text-em" data-e>API do WhatsApp</li></ul>
-        <a href="#" data-link class="mt-6 text-sm font-semibold text-em hover:underline">Ver projeto</a>
+        <div class="mb-6 flex aspect-[16/9] items-center justify-center overflow-hidden rounded-xl bg-ink text-sm text-mist" data-img title="No modo edição, use o botão para adicionar imagens">Imagem do projeto</div>
+        <h3 class="font-display text-2xl font-bold" data-e>Suporte a usuários do inDrive</h3>
+        <p class="mt-3 flex-1 leading-relaxed text-mist" data-e>Atendimento a motoristas e passageiros de todo o Brasil por chat e e-mail. Três anos e meio de contato direto com dúvidas, fricções e pedidos recorrentes.</p>
+        <ul class="mt-5 flex flex-wrap gap-2 text-sm"><li class="rounded-full bg-em/10 px-3 py-1 text-em" data-e>Pesquisa com usuários</li><li class="rounded-full bg-em/10 px-3 py-1 text-em" data-e>Empatia</li><li class="rounded-full bg-em/10 px-3 py-1 text-em" data-e>Resolução de problemas</li></ul>
+        <a href="#" hidden data-link class="mt-6 text-sm font-semibold text-em hover:underline">Ver detalhes</a>
       </article>
 
       <article class="reveal group flex flex-col rounded-2xl border border-white/10 bg-moss/40 p-7 hover:border-em/50">
-        <div class="mb-6 flex aspect-[16/9] items-center justify-center overflow-hidden rounded-xl bg-ink text-sm text-mist" data-img title="Clique no modo edição para trocar a imagem">Imagem do projeto</div>
-        <h3 class="font-display text-2xl font-bold" data-e>Plataforma de cursos Trilha</h3>
-        <p class="mt-3 flex-1 leading-relaxed text-mist" data-e>Área de membros com vídeo, progresso por aula e certificados. Mais de 2.000 alunos ativos nos primeiros seis meses.</p>
-        <ul class="mt-5 flex flex-wrap gap-2 text-sm"><li class="rounded-full bg-em/10 px-3 py-1 text-em" data-e>TypeScript</li><li class="rounded-full bg-em/10 px-3 py-1 text-em" data-e>Supabase</li><li class="rounded-full bg-em/10 px-3 py-1 text-em" data-e>Tailwind CSS</li></ul>
-        <a href="#" data-link class="mt-6 text-sm font-semibold text-em hover:underline">Ver projeto</a>
+        <div class="mb-6 flex aspect-[16/9] items-center justify-center overflow-hidden rounded-xl bg-ink text-sm text-mist" data-img title="No modo edição, use o botão para adicionar imagens">Imagem do projeto</div>
+        <h3 class="font-display text-2xl font-bold" data-e>Gestão de incidentes no inDrive</h3>
+        <p class="mt-3 flex-1 leading-relaxed text-mist" data-e>Tratamento de situações críticas dos usuários e proteção da segurança do aplicativo em cenários de alto risco, com decisões rápidas e comunicação clara.</p>
+        <ul class="mt-5 flex flex-wrap gap-2 text-sm"><li class="rounded-full bg-em/10 px-3 py-1 text-em" data-e>Priorização</li><li class="rounded-full bg-em/10 px-3 py-1 text-em" data-e>Segurança</li><li class="rounded-full bg-em/10 px-3 py-1 text-em" data-e>Comunicação</li></ul>
+        <a href="#" hidden data-link class="mt-6 text-sm font-semibold text-em hover:underline">Ver detalhes</a>
       </article>
 
       <article class="reveal group flex flex-col rounded-2xl border border-white/10 bg-moss/40 p-7 hover:border-em/50">
-        <div class="mb-6 flex aspect-[16/9] items-center justify-center overflow-hidden rounded-xl bg-ink text-sm text-mist" data-img title="Clique no modo edição para trocar a imagem">Imagem do projeto</div>
-        <h3 class="font-display text-2xl font-bold" data-e>Site institucional da Studio Norte</h3>
-        <p class="mt-3 flex-1 leading-relaxed text-mist" data-e>Redesenho completo de um site de arquitetura, com galeria rápida e foco em contato. Nota 98 no Lighthouse e o dobro de pedidos de orçamento.</p>
-        <ul class="mt-5 flex flex-wrap gap-2 text-sm"><li class="rounded-full bg-em/10 px-3 py-1 text-em" data-e>Astro</li><li class="rounded-full bg-em/10 px-3 py-1 text-em" data-e>Figma</li><li class="rounded-full bg-em/10 px-3 py-1 text-em" data-e>SEO técnico</li></ul>
-        <a href="#" data-link class="mt-6 text-sm font-semibold text-em hover:underline">Ver projeto</a>
+        <div class="mb-6 flex aspect-[16/9] items-center justify-center overflow-hidden rounded-xl bg-ink text-sm text-mist" data-img title="No modo edição, use o botão para adicionar imagens">Imagem do projeto</div>
+        <h3 class="font-display text-2xl font-bold" data-e>Projeto de direitos humanos, Instituto Aliança</h3>
+        <p class="mt-3 flex-1 leading-relaxed text-mist" data-e>Gestão administrativa de um projeto financiado pelo governo dos EUA, garantindo prazos, organização e a execução das tarefas do dia a dia.</p>
+        <ul class="mt-5 flex flex-wrap gap-2 text-sm"><li class="rounded-full bg-em/10 px-3 py-1 text-em" data-e>Gestão de projeto</li><li class="rounded-full bg-em/10 px-3 py-1 text-em" data-e>Organização</li><li class="rounded-full bg-em/10 px-3 py-1 text-em" data-e>Direitos humanos</li></ul>
+        <a href="#" hidden data-link class="mt-6 text-sm font-semibold text-em hover:underline">Ver detalhes</a>
+      </article>
+
+      <article class="reveal group flex flex-col rounded-2xl border border-white/10 bg-moss/40 p-7 hover:border-em/50">
+        <div class="mb-6 flex aspect-[16/9] items-center justify-center overflow-hidden rounded-xl bg-ink text-sm text-mist" data-img data-new title="No modo edição, use o botão para adicionar imagens">Imagem do projeto</div>
+        <h3 class="font-display text-2xl font-bold" data-e data-new>Bacharelado em Design na UFPE</h3>
+        <p class="mt-3 flex-1 leading-relaxed text-mist" data-e data-new>Formação em Design na Universidade Federal de Pernambuco, desde 2020, com especialidade em UI/UX e uso de softwares de design gráfico no dia a dia.</p>
+        <ul class="mt-5 flex flex-wrap gap-2 text-sm"><li class="rounded-full bg-em/10 px-3 py-1 text-em" data-e data-new>UI/UX Design</li><li class="rounded-full bg-em/10 px-3 py-1 text-em" data-e data-new>Design gráfico</li><li class="rounded-full bg-em/10 px-3 py-1 text-em" data-e data-new>Design inteligente</li></ul>
+        <a href="#" hidden data-link data-new class="mt-6 text-sm font-semibold text-em hover:underline">Ver detalhes</a>
+      </article>
+
+      <article class="reveal group flex flex-col rounded-2xl border border-white/10 bg-moss/40 p-7 hover:border-em/50">
+        <div class="mb-6 flex aspect-[16/9] items-center justify-center overflow-hidden rounded-xl bg-ink text-sm text-mist" data-img data-new title="No modo edição, use o botão para adicionar imagens">Imagem do projeto</div>
+        <h3 class="font-display text-2xl font-bold" data-e data-new>Front-end e desenvolvimento de sistemas</h3>
+        <p class="mt-3 flex-1 leading-relaxed text-mist" data-e data-new>Certificação em desenvolvimento front-end e graduação em Análise e Desenvolvimento de Sistemas, para desenhar interfaces que já nascem prontas para serem construídas.</p>
+        <ul class="mt-5 flex flex-wrap gap-2 text-sm"><li class="rounded-full bg-em/10 px-3 py-1 text-em" data-e data-new>HTML/CSS</li><li class="rounded-full bg-em/10 px-3 py-1 text-em" data-e data-new>JavaScript</li><li class="rounded-full bg-em/10 px-3 py-1 text-em" data-e data-new>Python</li></ul>
+        <a href="#" hidden data-link data-new class="mt-6 text-sm font-semibold text-em hover:underline">Ver detalhes</a>
       </article>
 
     </div>
   </div>
 </section>
 
-<!-- Resultados e depoimento -->
+<!-- Números -->
 <section id="resultados" class="px-5 py-24">
   <div class="mx-auto max-w-6xl">
-    <h2 class="reveal font-display text-3xl font-bold sm:text-5xl" data-e>Resultados que os clientes percebem</h2>
+    <h2 class="reveal font-display text-3xl font-bold sm:text-5xl" data-e>Minha trajetória em números</h2>
     <dl class="reveal mt-12 grid gap-10 sm:grid-cols-3">
-      <div><dt class="font-display text-6xl font-extrabold text-em" data-e>40+</dt><dd class="mt-2 text-mist" data-e>projetos entregues no prazo combinado</dd></div>
-      <div><dt class="font-display text-6xl font-extrabold text-em" data-e>98</dt><dd class="mt-2 text-mist" data-e>nota média de desempenho no Lighthouse</dd></div>
-      <div><dt class="font-display text-6xl font-extrabold text-em" data-e>92%</dt><dd class="mt-2 text-mist" data-e>dos clientes voltam para um segundo projeto</dd></div>
+      <div><dt class="font-display text-6xl font-extrabold text-em" data-e>C2</dt><dd class="mt-2 text-mist" data-e>nível de inglês, com noções de mandarim</dd></div>
+      <div><dt class="font-display text-6xl font-extrabold text-em" data-e>3,5 anos</dt><dd class="mt-2 text-mist" data-e>atendendo usuários de todo o Brasil</dd></div>
+      <div><dt class="font-display text-6xl font-extrabold text-em" data-e>3</dt><dd class="mt-2 text-mist" data-e>formações em design, tecnologia e multimídia</dd></div>
     </dl>
-    <figure class="reveal mt-16 max-w-3xl border-l-2 border-em pl-6">
-      <blockquote class="font-display text-2xl font-medium leading-snug sm:text-3xl" data-e>“Ele entendeu o que a gente precisava antes mesmo de a gente explicar direito. O site ficou pronto antes do prazo e já no primeiro mês trouxe clientes novos.”</blockquote>
-      <figcaption class="mt-5 text-mist" data-e>Mariana Lopes, fundadora da Casa Verde</figcaption>
-    </figure>
   </div>
 </section>
 
 <!-- Contato -->
 <section id="contato" class="bg-coal px-5 py-24">
   <div class="mx-auto max-w-6xl">
-    <h2 class="reveal max-w-3xl font-display text-4xl font-extrabold leading-tight sm:text-6xl" data-e>Vamos tirar a sua ideia do papel?</h2>
-    <p class="reveal mt-6 max-w-xl text-lg text-mist" data-e>Conte o que você precisa. Respondo em até um dia útil com um plano, um prazo e um valor.</p>
+    <h2 class="reveal max-w-3xl font-display text-4xl font-extrabold leading-tight sm:text-6xl" data-e>Tem um produto que precisa de uma interface melhor?</h2>
+    <p class="reveal mt-6 max-w-xl text-lg text-mist" data-e>Conte o que você precisa e como posso ajudar. Respondo o mais rápido possível.</p>
     <ul class="reveal mt-10 flex flex-wrap gap-4">
-      <li><a data-link href="mailto:seuemail@exemplo.com" class="inline-block rounded-full bg-em px-7 py-3.5 font-semibold text-ink hover:bg-emd">E-mail</a></li>
-      <li><a data-link href="https://wa.me/5581999999999" target="_blank" rel="noopener" class="inline-block rounded-full border border-white/15 px-7 py-3.5 font-medium hover:border-em">WhatsApp</a></li>
-      <li><a data-link href="https://www.linkedin.com/in/seu-usuario" target="_blank" rel="noopener" class="inline-block rounded-full border border-white/15 px-7 py-3.5 font-medium hover:border-em">LinkedIn</a></li>
-      <li><a data-link href="https://github.com/seu-usuario" target="_blank" rel="noopener" class="inline-block rounded-full border border-white/15 px-7 py-3.5 font-medium hover:border-em">GitHub</a></li>
+      <li><a data-link data-contact href="mailto:meduardaalexandrepereira002@gmail.com" class="inline-block rounded-full bg-em px-7 py-3.5 font-semibold text-ink hover:bg-emd">E-mail</a></li>
+      <li><a data-link data-contact href="https://wa.me/5581998399235" target="_blank" rel="noopener" class="inline-block rounded-full border border-white/15 px-7 py-3.5 font-medium hover:border-em">WhatsApp</a></li>
+      <li><a data-link data-contact href="https://www.linkedin.com/in/eduarda-alexandre-671907214" target="_blank" rel="noopener" class="inline-block rounded-full border border-white/15 px-7 py-3.5 font-medium hover:border-em">LinkedIn</a></li>
+      <li><a data-link data-contact href="https://github.com/Day0194" target="_blank" rel="noopener" class="inline-block rounded-full border border-white/15 px-7 py-3.5 font-medium hover:border-em">GitHub</a></li>
     </ul>
   </div>
 </section>
 </main>
 
 <footer class="px-5 py-8 text-center text-sm text-mist">
-  <p data-e>© 2026 Seu Nome. Todos os direitos reservados.</p>
+  <p data-e>© 2026 Maria Eduarda Alexandre Pereira. Todos os direitos reservados.</p>
 </footer>
 
-<input type="file" id="file" accept="image/*" class="hidden">
+<input type="file" id="file" accept="image/*" multiple class="hidden">
 
 <script>
 (function () {
-  var KEY = 'portfolio-v1';
-  var els = Array.prototype.slice.call(document.querySelectorAll('[data-e]'));
-  var imgs = Array.prototype.slice.call(document.querySelectorAll('[data-img]'));
-  var links = Array.prototype.slice.call(document.querySelectorAll('a[data-link]'));
+  var KEY = 'portfolio-maria-v1';
+  var all = function (q) { return Array.prototype.slice.call(document.querySelectorAll(q)); };
+  var els = all('[data-e]:not([data-new])').concat(all('[data-e][data-new]'));
+  var imgs = all('[data-img]:not([data-new])').concat(all('[data-img][data-new]'));
+  var links = all('a[data-link]:not([data-new])').concat(all('a[data-link][data-new]'));
   var body = document.body, editing = false, pickTarget = null;
+  var srcs = imgs.map(function () { return []; });
 
   // Restaurar conteúdo salvo
   try {
     var saved = JSON.parse(localStorage.getItem(KEY) || 'null');
     if (saved) {
       els.forEach(function (el, i) { if (saved.t && saved.t[i] != null) el.innerHTML = saved.t[i]; });
-      imgs.forEach(function (el, i) { if (saved.i && saved.i[i]) setImg(el, saved.i[i]); });
-      links.forEach(function (el, i) { if (saved.l && saved.l[i]) el.setAttribute('href', saved.l[i]); });
+      links.forEach(function (el, i) {
+        // Na primeira abertura desta versão, os botões de contato usam os links novos
+        if (saved.l && saved.l[i] && !(el.hasAttribute('data-contact') && saved.v !== 2)) el.setAttribute('href', saved.l[i]);
+      });
+      if (saved.v !== 2) save();
     }
   } catch (e) {}
 
-  function setImg(el, src) {
-    el.innerHTML = '<img src="' + src + '" alt="" class="h-full w-full object-cover">';
-    el.setAttribute('data-src', src);
+  // Imagens: lê o formato novo (lista por projeto) ou o antigo (uma imagem por projeto)
+  var imgSaved = null;
+  try { imgSaved = JSON.parse(localStorage.getItem(KEY + '-img') || 'null'); } catch (e) {}
+  var si = imgSaved || (saved && saved.i) || [];
+  si.forEach(function (v, i) { if (i < srcs.length) srcs[i] = Array.isArray(v) ? v.slice() : (v ? [v] : []); });
+
+  function render(i) {
+    var box = imgs[i], list = srcs[i], h = '';
+    box.classList.add('relative');
+    if (!list.length) {
+      h = '<span>Imagem do projeto</span>';
+    } else {
+      h = '<div class="gal absolute inset-0 flex snap-x snap-mandatory overflow-x-auto" style="scrollbar-width:none">' +
+        list.map(function (s, k) {
+          return '<div class="relative h-full w-full shrink-0 snap-center"><img src="' + s + '" alt="Imagem ' + (k + 1) + ' do projeto" loading="lazy" class="h-full w-full object-cover">' +
+            '<button type="button" data-rm="' + k + '" class="edit-only absolute left-2 top-2 h-8 w-8 items-center justify-center rounded-full bg-ink/80 text-lg leading-none text-bone hover:bg-red-600" aria-label="Remover imagem">×</button></div>';
+        }).join('') + '</div>';
+      if (list.length > 1) {
+        h += '<button type="button" data-nav="-1" class="absolute left-2 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-ink/70 text-bone hover:bg-em hover:text-ink" aria-label="Imagem anterior">‹</button>' +
+          '<button type="button" data-nav="1" class="absolute right-2 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-ink/70 text-bone hover:bg-em hover:text-ink" aria-label="Próxima imagem">›</button>' +
+          '<span class="gal-count absolute bottom-2 left-1/2 -translate-x-1/2 rounded-full bg-ink/70 px-3 py-1 text-xs text-bone">1 / ' + list.length + '</span>';
+      }
+    }
+    h += '<button type="button" data-add class="edit-only absolute bottom-2 right-2 rounded-full bg-em px-3 py-1.5 text-xs font-semibold text-ink hover:bg-emd">+ Adicionar imagens</button>';
+    box.innerHTML = h;
+  }
+  imgs.forEach(function (_, i) { render(i); });
+  if (!imgSaved && saved && saved.i && saved.i.some(Boolean)) saveImgs();
+
+  function shrink(f) {
+    return new Promise(function (res) {
+      var r = new FileReader();
+      r.onload = function () {
+        var im = new Image();
+        im.onload = function () {
+          var sc = Math.min(1, 1400 / im.width), c = document.createElement('canvas');
+          c.width = Math.round(im.width * sc); c.height = Math.round(im.height * sc);
+          c.getContext('2d').drawImage(im, 0, 0, c.width, c.height);
+          res(c.toDataURL('image/jpeg', 0.82));
+        };
+        im.onerror = function () { res(null); };
+        im.src = r.result;
+      };
+      r.onerror = function () { res(null); };
+      r.readAsDataURL(f);
+    });
+  }
+
+  var warned = false;
+  function saveImgs() {
+    try { localStorage.setItem(KEY + '-img', JSON.stringify(srcs)); }
+    catch (e) { if (!warned) { warned = true; alert('As imagens ocupam espaço demais no navegador e não foram salvas. Remova algumas ou use menos imagens por projeto.'); } }
   }
 
   function save() {
     try {
       localStorage.setItem(KEY, JSON.stringify({
         t: els.map(function (el) { return el.innerHTML; }),
-        i: imgs.map(function (el) { return el.getAttribute('data-src') || ''; }),
-        l: links.map(function (el) { return el.getAttribute('href'); })
+        l: links.map(function (el) { return el.getAttribute('href'); }),
+        v: 2
       }));
     } catch (e) {}
   }
@@ -234,14 +310,21 @@ tailwind.config = {
 
   // Trocar imagens dos projetos
   var file = document.getElementById('file');
-  imgs.forEach(function (box) {
-    box.addEventListener('click', function () { if (editing) { pickTarget = box; file.click(); } });
+  imgs.forEach(function (box, i) {
+    box.addEventListener('click', function (e) {
+      if (!editing) return;
+      var rm = e.target.closest('[data-rm]');
+      if (rm) { srcs[i].splice(+rm.getAttribute('data-rm'), 1); render(i); saveImgs(); return; }
+      if (e.target.closest('[data-add]') || !srcs[i].length) { pickTarget = i; file.click(); }
+    });
   });
   file.addEventListener('change', function () {
-    var f = file.files[0]; if (!f || !pickTarget) return;
-    var r = new FileReader();
-    r.onload = function () { setImg(pickTarget, r.result); save(); file.value = ''; };
-    r.readAsDataURL(f);
+    var fl = Array.prototype.slice.call(file.files), idx = pickTarget;
+    if (!fl.length || idx == null) return;
+    Promise.all(fl.map(shrink)).then(function (r) {
+      r.forEach(function (d) { if (d) srcs[idx].push(d); });
+      render(idx); saveImgs(); file.value = '';
+    });
   });
 
   document.getElementById('reset').addEventListener('click', function () {
@@ -253,7 +336,9 @@ tailwind.config = {
     setEditing(false);
     var clone = document.documentElement.cloneNode(true);
     ['bar', 'file'].forEach(function (id) { var n = clone.querySelector('#' + id); if (n) n.remove(); });
-    clone.querySelectorAll('script:not([src])').forEach(function (s) { if (s.textContent.indexOf('portfolio-v1') > -1) s.remove(); });
+    clone.querySelectorAll('script:not([src])').forEach(function (s) { if (s.textContent.indexOf('portfolio-maria-v1') > -1) s.remove(); });
+    clone.querySelectorAll('.edit-only').forEach(function (n) { n.remove(); });
+    clone.querySelectorAll('a[data-link][hidden]').forEach(function (n) { n.remove(); });
     clone.querySelectorAll('.reveal').forEach(function (n) { n.classList.add('in'); });
     var blob = new Blob(['<!DOCTYPE html>\n' + clone.outerHTML], { type: 'text/html' });
     var a = document.createElement('a');
@@ -269,6 +354,20 @@ tailwind.config = {
     }, { threshold: 0.12 });
     items.forEach(function (n) { io.observe(n); });
   } else { items.forEach(function (n) { n.classList.add('in'); }); }
+})();
+</script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-nav]'); if (!b) return;
+    var g = b.parentNode.querySelector('.gal');
+    if (g) g.scrollBy({ left: +b.getAttribute('data-nav') * g.clientWidth, behavior: 'smooth' });
+  });
+  document.addEventListener('scroll', function (e) {
+    var g = e.target; if (!g.classList || !g.classList.contains('gal')) return;
+    var c = g.parentNode.querySelector('.gal-count');
+    if (c) c.textContent = (Math.round(g.scrollLeft / g.clientWidth) + 1) + ' / ' + g.children.length;
+  }, true);
 })();
 </script>
 </body>
